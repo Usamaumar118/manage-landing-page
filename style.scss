@@ -17,7 +17,7 @@
 
 html{
 	font-size: 62.5%;
-	font-family: 'be vietnam', sans-serif;
+	font-family: 'Be Vietnam', sans-serif;
 	box-sizing: border-box;
 }
 
@@ -42,7 +42,9 @@ a{
 img{
 	max-width: 100%;
 }
-
+span{
+	display: block;
+}
 
 .section{
 	width: 90%;
@@ -97,3 +99,26 @@ img{
 
 
 
+.intro{
+	display: grid;
+	grid-template-columns: 40% 40%;
+	gap: 5rem;
+	padding: 8rem 0;
+	align-items: center;
+	justify-content: space-between;
+
+	&__text{
+		&__heading{
+			font-size: 6rem;
+			color: var(--c-dark-blue);
+			font-weight: 700;
+			line-height: 1.15;
+			margin-bottom: 3rem;
+		}
+		&__para{
+			font-weight: 500;
+			color: var(--c-dark-grayish-blue);
+			margin-bottom: 3rem;
+		}
+	}
+}

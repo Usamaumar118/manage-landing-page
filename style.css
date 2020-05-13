@@ -23,6 +23,12 @@ html {
           box-sizing: border-box;
 }
 
+body {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  font-weight: 300;
+}
+
 ul {
   list-style: none;
 }
@@ -30,9 +36,64 @@ ul {
 a {
   text-decoration: none;
   display: inline-block;
+  font-size: 1.4rem;
+  line-height: 1;
+  color: var(--c-dark-blue);
 }
 
 img {
   max-width: 100%;
+}
+
+.section {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 140rem;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2rem 0;
+  margin-top: 4rem;
+}
+
+.nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.nav__list__item {
+  margin-right: 2rem;
+  font-weight: 700;
+}
+
+.nav__list__item--last {
+  margin-right: 0;
+}
+
+.btn {
+  padding: .85em 1.5em;
+  border-radius: 22rem;
+  font-weight: 700;
+}
+
+.btn--orange {
+  background-color: var(--c-bright-red);
+  color: #fff;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(242, 95, 58, 0.5);
+          box-shadow: 0 0.5rem 1rem rgba(242, 95, 58, 0.5);
+}
+
+.btn--white {
+  background-color: #fff;
 }
 /*# sourceMappingURL=style.css.map */

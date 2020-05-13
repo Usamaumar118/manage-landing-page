@@ -98,10 +98,10 @@ span{
 
 
 .btn{
-	padding: .85em 1.5em;
+	padding: .95em 1.5em;
 	border-radius: 22rem;
 	font-weight: 700;
-
+	
 	&--orange{
 		background-color: var(--c-bright-red);
 		color: #fff;
@@ -137,9 +137,7 @@ span{
 .features{
 	align-items: start;
 
-
 	&__text{
-
 
 		&__heading{
 			font-size: 4rem;
@@ -154,7 +152,6 @@ span{
 	}
 
 	&__points{
-		
 
 		&__item{
 			display: flex;
@@ -179,12 +176,43 @@ span{
 					margin-bottom: 2rem;
 				}
 			}
-
-
 		}
 	}
-
-
 }
 
 
+.testimonials{
+
+	padding: 8rem 4rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	&__heading{
+		
+		font-size: 4rem;
+		line-height: 1.15;
+		color: var(--c-dark-blue);
+	}
+
+
+	&__item{
+		text-align: center;
+		margin: 4rem;
+
+		&__container{
+			display: flex;
+			padding: 5rem 0;
+		}
+
+		&__img{
+			width: 8rem;
+		}
+
+		&__name{
+			margin: 1.5rem 0;
+			font-size: 1.8rem;
+		}
+	}
+}

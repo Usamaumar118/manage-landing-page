@@ -103,7 +103,7 @@ span {
 }
 
 .btn {
-  padding: .85em 1.5em;
+  padding: .95em 1.5em;
   border-radius: 22rem;
   font-weight: 700;
 }
@@ -175,5 +175,49 @@ span {
 .features__points__item__text__heading {
   font-size: 1.8rem;
   margin-bottom: 2rem;
+}
+
+.testimonials {
+  padding: 8rem 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.testimonials__heading {
+  font-size: 4rem;
+  line-height: 1.15;
+  color: var(--c-dark-blue);
+}
+
+.testimonials__item {
+  text-align: center;
+  margin: 4rem;
+}
+
+.testimonials__item__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 5rem 0;
+}
+
+.testimonials__item__img {
+  width: 8rem;
+}
+
+.testimonials__item__name {
+  margin: 1.5rem 0;
+  font-size: 1.8rem;
 }
 /*# sourceMappingURL=style.css.map */

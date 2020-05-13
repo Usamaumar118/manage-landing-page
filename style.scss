@@ -83,17 +83,20 @@ input{
 	padding: 2rem 0;
 	margin-top: 4rem;
 
+}
 
+.top{
+	position: relative;
+	overflow: hidden;
+	
 	&::after{
 		content: url('images/bg-tablet-pattern.svg');
 		position: absolute;
-		right: -10rem;
-		top: -20rem;
+		right: -5rem;
+		top: -10rem;
 		z-index: -1;
 	}
 }
-
-
 
 
 

@@ -1,5 +1,6 @@
 :root {
   --c-bright-red: hsl(12, 88%, 59%);
+  --c-bright-red-hover: rgb(224, 100, 69);
   --c-dark-blue: hsl(228, 39%, 23%);
   --c-dark-grayish-blue: hsl(227, 12%, 61%);
   --c-very-dark-blue: hsl(233, 12%, 13%);
@@ -50,6 +51,11 @@ img {
 
 span {
   display: block;
+}
+
+input {
+  font-family: inherit;
+  outline: none;
 }
 
 .section {
@@ -253,5 +259,106 @@ span {
   font-size: 4rem;
   line-height: 1.15;
   width: 40%;
+}
+
+.footer {
+  background-color: var(--c-very-dark-blue);
+}
+
+.footer__content {
+  display: -ms-grid;
+  display: grid;
+  gap: 5rem;
+  -ms-grid-columns: 1.5fr 2fr 2fr 2fr;
+      grid-template-columns: 1.5fr 2fr 2fr 2fr;
+}
+
+.footer__social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 1rem;
+}
+
+.footer__social__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer__social__list__item {
+  margin-right: 1rem;
+}
+
+.footer__social__list__item--last {
+  margin-right: 0;
+}
+
+.footer__nav__list__item {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.footer__cta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer__cta__form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 75% 1fr;
+      grid-template-columns: 75% 1fr;
+  gap: 2rem;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.footer__cta__form__email {
+  padding: .8em 1.8rem;
+  width: 100%;
+  border: none;
+  border-radius: 22rem;
+}
+
+.footer__cta__form .error-msg {
+  color: var(--c-bright-red);
+  font-size: 1.4rem;
+  margin-left: 1.4em;
+  font-style: italic;
+  display: none;
+}
+
+.footer__cta__form__submit {
+  padding: .8em 2rem;
+  border: none;
+  background-color: var(--c-bright-red);
+  color: #fff;
+  -webkit-transition: background-color .1s ease-in;
+  transition: background-color .1s ease-in;
+}
+
+.footer__copyright {
+  text-align: right;
+  font-size: 1.4rem;
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,5 +1,6 @@
 :root{
 	--c-bright-red: hsl(12, 88%, 59%);
+	--c-bright-red-hover: rgb(224, 100, 69);
 	--c-dark-blue: hsl(228, 39%, 23%);
 	--c-dark-grayish-blue: hsl(227, 12%, 61%);
 	--c-very-dark-blue: hsl(233, 12%, 13%);
@@ -12,7 +13,7 @@
 *::before{
 	margin: 0;
 	padding: 0;
-	box-sizing: inherit;
+    box-sizing: inherit;
 }
 
 html{
@@ -46,6 +47,11 @@ img{
 }
 span{
 	display: block;
+}
+
+input{
+	font-family: inherit;
+	outline: none;
 }
 
 .section{
@@ -244,4 +250,93 @@ span{
 			width: 40%;
 		}
 	}
+}
+
+.footer{
+	background-color: var(--c-very-dark-blue);
+
+	&__content{
+		display: grid;
+		gap: 5rem;
+		grid-template-columns: 1.5fr 2fr 2fr 2fr;
+	}
+
+	&__social{
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+		justify-content: space-between;
+
+		padding-top: 1rem;
+
+
+		&__list{
+			display: flex;
+
+			&__item{
+				margin-right: 1rem;
+
+				&--last{
+					margin-right: 0;
+				}
+			}
+		}
+	}
+
+
+	&__nav{
+		
+		&__list{
+
+			&__item{
+				color: #fff;
+				margin-bottom: 1rem
+			}
+		}
+	}
+
+	&__cta{
+
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		&__form{
+			display: grid;
+			grid-template-columns: 75% 1fr;
+			gap: 2rem;
+			align-items: flex-start;
+
+			&__email{
+				padding: .8em 1.8rem;
+				width: 100%;
+				border: none;
+				border-radius: 22rem;
+			}
+
+			.error-msg{
+				color: var(--c-bright-red);
+				font-size: 1.4rem;
+				margin-left: 1.4em;
+				font-style: italic;
+				display: none;
+
+			}
+
+			&__submit{
+				padding: .8em 2rem;
+				border: none;
+				background-color: var(--c-bright-red);
+				color:#fff;
+				transition: background-color .1s ease-in; 
+			}
+		}
+
+		
+	}
+	&__copyright{
+		text-align: right;
+		font-size: 1.4rem;
+	}
+
 }

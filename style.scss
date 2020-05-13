@@ -23,10 +23,12 @@ html{
 
 body{
 	font-size: 1.6rem;
-	line-height: 1.5;
-	font-weight: 300;
+	line-height: 1.8;
 }
 
+p{
+	color: var(--c-dark-grayish-blue);
+}
 ul{
 	list-style: none
 }
@@ -50,7 +52,18 @@ span{
 	width: 90%;
 	margin: 0 auto;
 	max-width: 140rem;
+	padding: 8rem 0 4rem;
 }
+.two-col{
+	display: grid;
+	grid-template-columns: 40% 40%;
+	gap: 5rem;
+	align-items: center;
+	justify-content: space-between;
+}
+
+
+
 
 .header{
 	display: flex;
@@ -60,12 +73,14 @@ span{
 	margin-top: 4rem;
 }
 
+
+
+
+
 .nav{
 
 	&__list{
 		display: flex;
-
-
 
 		&__item{
 			margin-right: 2rem;
@@ -78,6 +93,9 @@ span{
 	}
 
 }
+
+
+
 
 .btn{
 	padding: .85em 1.5em;
@@ -100,12 +118,6 @@ span{
 
 
 .intro{
-	display: grid;
-	grid-template-columns: 40% 40%;
-	gap: 5rem;
-	padding: 8rem 0;
-	align-items: center;
-	justify-content: space-between;
 
 	&__text{
 		&__heading{
@@ -116,9 +128,63 @@ span{
 			margin-bottom: 3rem;
 		}
 		&__para{
-			font-weight: 500;
-			color: var(--c-dark-grayish-blue);
 			margin-bottom: 3rem;
 		}
 	}
 }
+
+
+.features{
+	align-items: start;
+
+
+	&__text{
+
+
+		&__heading{
+			font-size: 4rem;
+			line-height: 1.15;
+			color: var(--c-dark-blue);
+			margin-bottom: 3rem;
+		}
+
+		&__para{
+			width: 65%;
+		}
+	}
+
+	&__points{
+		
+
+		&__item{
+			display: flex;
+			align-items: flex-start;
+
+			&__number{
+				background: var(--c-bright-red);
+				color: #fff;
+				line-height: 1;
+				font-size: 1.4rem;
+				font-weight: 500;
+				border-radius: 22rem;
+				padding: .8rem 1.8rem;
+				margin-right: 3rem;
+			}
+
+			&__text{
+				margin-bottom: 3rem;
+
+				&__heading{
+					font-size: 1.8rem;
+					margin-bottom: 2rem;
+				}
+			}
+
+
+		}
+	}
+
+
+}
+
+

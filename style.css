@@ -25,8 +25,11 @@ html {
 
 body {
   font-size: 1.6rem;
-  line-height: 1.5;
-  font-weight: 300;
+  line-height: 1.8;
+}
+
+p {
+  color: var(--c-dark-grayish-blue);
 }
 
 ul {
@@ -53,6 +56,21 @@ span {
   width: 90%;
   margin: 0 auto;
   max-width: 140rem;
+  padding: 8rem 0 4rem;
+}
+
+.two-col {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 40% 40%;
+      grid-template-columns: 40% 40%;
+  gap: 5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .header {
@@ -101,21 +119,6 @@ span {
   background-color: #fff;
 }
 
-.intro {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 40% 40%;
-      grid-template-columns: 40% 40%;
-  gap: 5rem;
-  padding: 8rem 0;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
 .intro__text__heading {
   font-size: 6rem;
   color: var(--c-dark-blue);
@@ -125,8 +128,52 @@ span {
 }
 
 .intro__text__para {
-  font-weight: 500;
-  color: var(--c-dark-grayish-blue);
   margin-bottom: 3rem;
+}
+
+.features {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+
+.features__text__heading {
+  font-size: 4rem;
+  line-height: 1.15;
+  color: var(--c-dark-blue);
+  margin-bottom: 3rem;
+}
+
+.features__text__para {
+  width: 65%;
+}
+
+.features__points__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.features__points__item__number {
+  background: var(--c-bright-red);
+  color: #fff;
+  line-height: 1;
+  font-size: 1.4rem;
+  font-weight: 500;
+  border-radius: 22rem;
+  padding: .8rem 1.8rem;
+  margin-right: 3rem;
+}
+
+.features__points__item__text {
+  margin-bottom: 3rem;
+}
+
+.features__points__item__text__heading {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,6 +1,6 @@
 :root{
 	--c-bright-red: hsl(12, 88%, 59%);
-	--c-bright-red-hover: rgb(224, 100, 69);
+	--c-bright-red-hover: rgb(241, 129, 101);
 	--c-dark-blue: hsl(228, 39%, 23%);
 	--c-dark-grayish-blue: hsl(227, 12%, 61%);
 	--c-very-dark-blue: hsl(233, 12%, 13%);
@@ -108,10 +108,17 @@ input{
 		&__item{
 			margin-right: 2rem;
 			font-weight: 700;
+			color: var(--c-dark-blue);
+			transition: color .2s ease-in;
 
 			&--last{
 				margin-right: 0;
 			}
+
+			&:hover{
+				color: var(--c-dark-grayish-blue);
+			}
+
 		}
 	}
 
@@ -124,17 +131,37 @@ input{
 	padding: .95em 1.5em;
 	border-radius: 22rem;
 	font-weight: 700;
+	transition: background-color .2s ease-in,
+				color .2s ease-in,
+				box-shadow .2s ease-in,
+				transform .2s ease-out;
 
 	&--orange{
 		background-color: var(--c-bright-red);
 		color: #fff;
 		box-shadow: 0 .5rem 1rem rgba( #f25f3a, .5);
+
+		&:hover{
+			background-color: var(--c-bright-red-hover);
+			color: var(--c-very-light-gray);
+			box-shadow: 0 .5rem 1.5rem rgba( #f25f3a, .7);
+		}
 	}
 	&--white{
 		background-color: #fff;
 		color: var(--c-bright-red);
 		box-shadow: 0 .5rem 1rem rgba( #fff, .5);
 
+		&:hover{
+			color: var(--c-bright-red-hover);
+			box-shadow: 0 .5rem 1.5rem rgba( #f25f3a, .7);
+
+		}
+
+	}
+
+	&:active{
+		transform: translateY(2px);
 	}
 
 }
@@ -312,7 +339,12 @@ input{
 
 			&__item{
 				color: #fff;
-				margin-bottom: 1rem
+				margin-bottom: 1rem;
+				transition: color .2s ease-in;
+
+				&:hover{
+					color: var(--c-bright-red-hover);
+				}
 			}
 		}
 	}

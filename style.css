@@ -1,6 +1,6 @@
 :root {
   --c-bright-red: hsl(12, 88%, 59%);
-  --c-bright-red-hover: rgb(224, 100, 69);
+  --c-bright-red-hover: rgb(241, 129, 101);
   --c-dark-blue: hsl(228, 39%, 23%);
   --c-dark-grayish-blue: hsl(227, 12%, 61%);
   --c-very-dark-blue: hsl(233, 12%, 13%);
@@ -119,16 +119,27 @@ input {
 .nav__list__item {
   margin-right: 2rem;
   font-weight: 700;
+  color: var(--c-dark-blue);
+  -webkit-transition: color .2s ease-in;
+  transition: color .2s ease-in;
 }
 
 .nav__list__item--last {
   margin-right: 0;
 }
 
+.nav__list__item:hover {
+  color: var(--c-dark-grayish-blue);
+}
+
 .btn {
   padding: .95em 1.5em;
   border-radius: 22rem;
   font-weight: 700;
+  -webkit-transition: background-color .2s ease-in, color .2s ease-in, -webkit-box-shadow .2s ease-in, -webkit-transform .2s ease-out;
+  transition: background-color .2s ease-in, color .2s ease-in, -webkit-box-shadow .2s ease-in, -webkit-transform .2s ease-out;
+  transition: background-color .2s ease-in, color .2s ease-in, box-shadow .2s ease-in, transform .2s ease-out;
+  transition: background-color .2s ease-in, color .2s ease-in, box-shadow .2s ease-in, transform .2s ease-out, -webkit-box-shadow .2s ease-in, -webkit-transform .2s ease-out;
 }
 
 .btn--orange {
@@ -138,11 +149,29 @@ input {
           box-shadow: 0 0.5rem 1rem rgba(242, 95, 58, 0.5);
 }
 
+.btn--orange:hover {
+  background-color: var(--c-bright-red-hover);
+  color: var(--c-very-light-gray);
+  -webkit-box-shadow: 0 0.5rem 1.5rem rgba(242, 95, 58, 0.7);
+          box-shadow: 0 0.5rem 1.5rem rgba(242, 95, 58, 0.7);
+}
+
 .btn--white {
   background-color: #fff;
   color: var(--c-bright-red);
   -webkit-box-shadow: 0 0.5rem 1rem rgba(255, 255, 255, 0.5);
           box-shadow: 0 0.5rem 1rem rgba(255, 255, 255, 0.5);
+}
+
+.btn--white:hover {
+  color: var(--c-bright-red-hover);
+  -webkit-box-shadow: 0 0.5rem 1.5rem rgba(242, 95, 58, 0.7);
+          box-shadow: 0 0.5rem 1.5rem rgba(242, 95, 58, 0.7);
+}
+
+.btn:active {
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
 }
 
 .intro__text__heading {
@@ -330,6 +359,12 @@ input {
 .footer__nav__list__item {
   color: #fff;
   margin-bottom: 1rem;
+  -webkit-transition: color .2s ease-in;
+  transition: color .2s ease-in;
+}
+
+.footer__nav__list__item:hover {
+  color: var(--c-bright-red-hover);
 }
 
 .footer__cta {

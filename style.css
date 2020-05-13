@@ -59,6 +59,10 @@ span {
   padding: 8rem 0 4rem;
 }
 
+.section--cta {
+  padding: 6rem 0;
+}
+
 .two-col {
   display: -ms-grid;
   display: grid;
@@ -117,6 +121,9 @@ span {
 
 .btn--white {
   background-color: #fff;
+  color: var(--c-bright-red);
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(255, 255, 255, 0.5);
+          box-shadow: 0 0.5rem 1rem rgba(255, 255, 255, 0.5);
 }
 
 .intro__text__heading {
@@ -219,5 +226,32 @@ span {
 .testimonials__item__name {
   margin: 1.5rem 0;
   font-size: 1.8rem;
+}
+
+.cta {
+  background-color: var(--c-bright-red);
+  background-image: url("images/bg-simplify-section-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cta__content {
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cta__content__heading {
+  color: #fff;
+  font-size: 4rem;
+  line-height: 1.15;
+  width: 40%;
 }
 /*# sourceMappingURL=style.css.map */

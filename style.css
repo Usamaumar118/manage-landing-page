@@ -97,6 +97,14 @@ input {
   margin-top: 4rem;
 }
 
+.header::after {
+  content: url("images/bg-tablet-pattern.svg");
+  position: absolute;
+  right: -10rem;
+  top: -20rem;
+  z-index: -1;
+}
+
 .nav__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -148,6 +156,16 @@ input {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: start;
+  position: relative;
+  padding-bottom: 8rem;
+}
+
+.features::after {
+  content: url("images/bg-tablet-pattern.svg");
+  position: absolute;
+  left: -55rem;
+  bottom: -25rem;
+  z-index: -1;
 }
 
 .features__text__heading {

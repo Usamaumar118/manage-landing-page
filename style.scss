@@ -82,6 +82,15 @@ input{
 	justify-content: space-between;
 	padding: 2rem 0;
 	margin-top: 4rem;
+
+
+	&::after{
+		content: url('images/bg-tablet-pattern.svg');
+		position: absolute;
+		right: -10rem;
+		top: -20rem;
+		z-index: -1;
+	}
 }
 
 
@@ -149,7 +158,17 @@ input{
 
 .features{
 	align-items: start;
+	position: relative;
+	padding-bottom: 8rem;
 
+
+	&::after{
+		content: url('images/bg-tablet-pattern.svg');
+		position: absolute;
+		left: -55rem;
+		bottom: -25rem;
+		z-index: -1;
+	}
 	&__text{
 
 		&__heading{

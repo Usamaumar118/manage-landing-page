@@ -198,7 +198,7 @@ input {
 
 @media (max-width: 725px) {
   .nav__list {
-    background-color: crimson;
+    background-color: #fff;
     border-radius: .5rem;
     padding: 5rem;
     position: absolute;
@@ -212,6 +212,10 @@ input {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    display: none;
+    z-index: 2;
+    -webkit-transition: display .4s ease-in;
+    transition: display .4s ease-in;
   }
 }
 
@@ -775,5 +779,26 @@ input {
     grid-column: 1 / -1;
     text-align: center;
   }
+}
+
+.is-open {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.top::before {
+  content: '';
+  width: 100%;
+  position: absolute;
+  height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.15)), to(rgba(0, 0, 0, 0.4)));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.4));
+  z-index: 1;
+  display: none;
+}
+
+.top.overlay::before {
+  display: block;
 }
 /*# sourceMappingURL=style.css.map */

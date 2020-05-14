@@ -155,6 +155,12 @@ input {
 }
 
 @media (max-width: 725px) {
+  .top::after {
+    display: none;
+  }
+}
+
+@media (max-width: 725px) {
   .nav {
     display: none;
   }
@@ -278,6 +284,12 @@ input {
   z-index: -11;
 }
 
+@media (max-width: 725px) {
+  .features::after {
+    display: none;
+  }
+}
+
 .features__text__heading {
   font-size: 4rem;
   line-height: 1.15;
@@ -322,12 +334,27 @@ input {
 }
 
 .features__points__item {
+  text-align: left;
+  margin-bottom: 5rem;
+}
+
+.features__points__item__top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 725px) {
+  .features__points__item__top {
+    background-color: var(--c-very-pale-red);
+    border-top-left-radius: 55rem;
+    border-bottom-left-radius: 55rem;
+    width: 105.5%;
+  }
 }
 
 .features__points__item__number {
@@ -339,16 +366,12 @@ input {
   border: 1px solid var(--c-bright-red);
   border-radius: 22rem;
   padding: .8rem 1.8rem;
-  margin-right: 3rem;
-}
-
-.features__points__item__text {
-  margin-bottom: 3rem;
+  margin-right: 2.5rem;
 }
 
 .features__points__item__text__heading {
   font-size: 1.8rem;
-  margin-bottom: 2rem;
+  color: var(--c-dark-blue);
   position: relative;
 }
 
@@ -356,30 +379,15 @@ input {
   .features__points__item__text__heading {
     font-size: 1.6rem;
   }
-  .features__points__item__text__heading::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    height: 110%;
-    border-top-left-radius: 110rem;
-    border-bottom-left-radius: 110rem;
-    background: var(--c-very-pale-red);
-    width: 105%;
-    z-index: -1;
-  }
+}
+
+.features__points__item__text__para {
+  margin-left: calc(2.5rem + 8.52%);
 }
 
 @media (max-width: 725px) {
-  .features__points__item__text__heading {
+  .features__points__item__text__para {
     margin-left: 0;
-  }
-}
-
-@media (max-width: 725px) {
-  .features__points__item__text {
-    margin-left: -18%;
   }
 }
 

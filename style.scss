@@ -688,3 +688,5 @@ input{
 .top.overlay::before{
 	display: block;
 }
+.attribution { font-size: 12px; text-align: center; }
+.attribution a { color: var(--c-bright-red) }

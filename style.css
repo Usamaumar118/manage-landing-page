@@ -101,6 +101,12 @@ input {
   padding: 8rem 0 4rem;
 }
 
+@media (max-width: 725px) {
+  .section {
+    padding: 4rem 0;
+  }
+}
+
 .section--cta {
   padding: 6rem 0;
 }
@@ -139,6 +145,30 @@ input {
           justify-content: space-between;
   padding: 2rem 0;
   margin-top: 4rem;
+  position: relative;
+}
+
+.header__logo__img {
+  position: relative;
+  z-index: 1;
+}
+
+.header__btn {
+  display: none;
+}
+
+@media (max-width: 725px) {
+  .header__btn {
+    display: block;
+    position: relative;
+    z-index: 11;
+  }
+}
+
+@media (max-width: 725px) {
+  .header__cta {
+    display: none;
+  }
 }
 
 .top {
@@ -160,16 +190,29 @@ input {
   }
 }
 
-@media (max-width: 725px) {
-  .nav {
-    display: none;
-  }
-}
-
 .nav__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media (max-width: 725px) {
+  .nav__list {
+    background-color: crimson;
+    border-radius: .5rem;
+    padding: 5rem;
+    position: absolute;
+    top: 150%;
+    left: 0;
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .nav__list__item {
@@ -180,8 +223,17 @@ input {
   transition: color .2s ease-in;
 }
 
+@media (max-width: 725px) {
+  .nav__list__item {
+    font-size: 1.8rem;
+    margin-bottom: 3rem;
+    margin-right: 0;
+  }
+}
+
 .nav__list__item--last {
   margin-right: 0;
+  margin-bottom: 0;
 }
 
 .nav__list__item:hover {
@@ -366,7 +418,7 @@ input {
   border: 1px solid var(--c-bright-red);
   border-radius: 22rem;
   padding: .8rem 1.8rem;
-  margin-right: 2.5rem;
+  margin-right: 1.5rem;
 }
 
 .features__points__item__text__heading {
@@ -382,7 +434,7 @@ input {
 }
 
 .features__points__item__text__para {
-  margin-left: calc(2.5rem + 8.52%);
+  margin-left: calc(1.5rem + 8.52%);
 }
 
 @media (max-width: 725px) {

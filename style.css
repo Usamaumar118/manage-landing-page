@@ -212,10 +212,16 @@ input {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    display: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    opacity: 0;
+    visibility: 0;
     z-index: 2;
-    -webkit-transition: display .4s ease-in;
-    transition: display .4s ease-in;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
   }
 }
 
@@ -782,9 +788,10 @@ input {
 }
 
 .is-open {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  opacity: 1;
+  visibility: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 .top::before {
@@ -795,11 +802,15 @@ input {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.15)), to(rgba(0, 0, 0, 0.4)));
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.4));
   z-index: 1;
-  display: none;
+  visibility: 0;
+  opacity: 0;
+  -webkit-transition: .2s ease-in;
+  transition: .2s ease-in;
 }
 
 .top.overlay::before {
-  display: block;
+  visibility: 1;
+  opacity: 1;
 }
 
 .attribution {

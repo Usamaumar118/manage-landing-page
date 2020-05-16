@@ -417,6 +417,9 @@ input{
 	justify-content: center;
 	align-items: center;
 
+
+
+
 	&__heading{
 		
 		font-size: 4rem;
@@ -436,16 +439,25 @@ input{
 	}
 
 
-	&__item{
-		display: none;
-		text-align: center;
-		margin: 4rem;
+	&__item__container{
+		display: grid;
+		grid-template-columns: repeat(4, 50rem);
+		width: 100%;
+		padding: 5rem 0;
+		overflow-x: scroll;
+		scroll-snap-type: x mandatory;
 
-		&__container{
-			display: flex;
-			padding: 5rem 0;
+		@media (max-width: 875px){
+			grid-template-columns: repeat(4, 100%);
 		}
 
+	}
+
+	&__item{
+		scroll-snap-align: center;
+		text-align: center;
+		padding: 4rem;
+		
 		&__img{
 			width: 8rem;
 		}
